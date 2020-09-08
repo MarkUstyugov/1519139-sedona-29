@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Марк Устюгов](https://up.htmlacademy.ru/htmlcss/29/user/1519139).
-* Наставник: `Неизвестно`.
+* Наставник: `[Лиза Пак](https://htmlacademy.ru/profile/lizzy)`.
 
 ---
 
