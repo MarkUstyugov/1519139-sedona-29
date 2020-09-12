@@ -1,12 +1,122 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+</head>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+<body>
+    <header>
+        <nav class="main-nav">
+            <a class="logo">
+                <img src="img/logo.svg" alt="Логотип сайта Седона" width="138" height="70">
+            </a>
+            <ul class="site-navigation">
+                <li class="site-navigation-item">
+                    <a href="info">Информация</a>
+                </li>
+                <li class="site-navigation-item">
+                    <a href="media">Фото и видео</a>
+                </li>
+                <li class="site-navigation-item">
+                    <a href="map">Карта штата</a>
+                </li>
+                <li class="site-navigation-item">
+                    <a href="hotels.html">Гостиницы</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="visually-hidden">Сайт для поиска жилья в городе Седоне</h1>
+        <div class="welcome">
+            <img class="welcome-title" src="img/welcome.svg" alt="Приветствие" width="465" height="350">
+        </div>
+        <section class="advantages">
+            <h2>Седона — небольшой городок в Аризоне,заслуживающий большего!</h2>
+            <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+            <ol class="advantage-list">
+                <li class="advantage-list-item">
+                    <h3>Настоящий городок</h3>
+                    <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+                </li>
+                <li class="advantage-list-item">
+                    <h3>Там есть Мост дьявола</h3>
+                    <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                </li>
+                <li class="advantage-list-item">
+                    <h3>Небольшая площадь</h3>
+                    <p>Все достопримечательности находятся очень близко</p>
+                </li>
+                <li class="advantage-list-item">
+                    <h3>Красивая дорога</h3>
+                    <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
+                </li>
+                <li class="advantage-list-item">
+                    <h3>Мало туристов</h3>
+                    <p>Большинство едет в гранд каньон и толпится там</p>
+                </li>
+            </ol>
+        </section>
+        <section class="feature">
+            <h2 class="visually-hidden">Особенности</h2>
+            <ul class="feature-list">
+                <li class="feature-list-item">
+                    <h3>Жильё</h3>
+                    <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                </li>
+                <li class="feature-list-item">
+                    <h3>Еда</h3>
+                    <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                </li>
+                <li class="feature-list-item">
+                    <h3>Сувениры</h3>
+                    <p>Не только китайского, но и местного производства!</p>
+                </li>
+            </ul>
+        </section>
+        <section class="search">
+            <h2>Заинтересовались?</h2>
+            <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+            <button type="button" class="search-btn">Поиск Гостиницы в седоне</button>
+            <form action="#" method="POST" id="search-form" class="search-form">
+                <label for="search-form-from">Дата заезда</label>
+                <input type="text" name="search-form-from" id="search-form-from" placeholder="24 апреля 2017">
+                <label for="search-form-to">Дата выезда</label>
+                <input type="text" name="search-form-to" id="search-form-to" placeholder="4 июня 2017">
+                <label for="search-form-adult">Взрослые</label>
+                <input type="number" name="search-form-adult" id="search-form-adult" placeholder="2">
+                <label for="search-form-child">Дети</label>
+                <input type="number" name="search-form-child" id="search-form-child" placeholder="0">
+                <button type="submit">Найти</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <img class="map-image" src="img/map.png" alt="Карта штата" width="1199" height="594">
+        <p class="contacts">
+            #visitsedona<br>
+            ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a>
+        </p>
+        <ul class="social-list">
+            <li class="social-list-item">
+                <a href="#">Twitter</a>
+            </li>
+            <li class="social-list-item">
+                <a href="#">facebook</a>
+            </li>
+            <li class="social-list-item">
+                <a href="#">Youtube</a>
+            </li>
+        </ul>
+        <p class="developed">
+            Website by
+            <a href="#"><img src="img/logo-htmlacademy.svg" alt="Логотип HTML Академии" width="115" height="41"></a>
+        </p>
+    </footer>
+</body>
 
-  </body>
 </html>

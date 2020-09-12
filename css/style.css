@@ -1,0 +1,24 @@
+/* .welcome {
+    position: relative;
+    width: 1200px;
+    height: 509px;
+    background: url(../img/promo.jpg) no-repeat;
+}
+
+.welcome::after {
+    content: url(../img/welcome-bottom.png);
+    position: absolute;
+    bottom: -4px;
+}
+
+.welcome-bottom {
+    position: absolute;
+    bottom: 0px;
+}
+
+.welcome-title {
+    position: absolute;
+    top: 77px;
+    left: 371px;
+} */
+
