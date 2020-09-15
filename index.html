@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
     <meta charset="utf-8">
@@ -8,10 +8,10 @@
     <title>HTML Academy: Седона</title>
 </head>
 
-<body>
-    <header>
+<body class="page-body">
+    <header class="main-header">
         <nav class="main-nav">
-            <a class="logo">
+            <a class="main-nav-logo">
                 <img src="img/logo.svg" alt="Логотип сайта Седона" width="138" height="70">
             </a>
             <ul class="site-navigation">
@@ -30,7 +30,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main-container">
         <h1 class="visually-hidden">Сайт для поиска жилья в городе Седоне</h1>
         <div class="welcome">
             <img class="welcome-title" src="img/welcome.svg" alt="Приветствие" width="465" height="350">
@@ -43,6 +43,22 @@
                     <h3>Настоящий городок</h3>
                     <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
                 </li>
+                <div class="feature">
+                    <ul class="feature-list">
+                        <li class="feature-list-item">
+                            <h3>Жильё</h3>
+                            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                        </li>
+                        <li class="feature-list-item">
+                            <h3>Еда</h3>
+                            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                        </li>
+                        <li class="feature-list-item">
+                            <h3>Сувениры</h3>
+                            <p>Не только китайского, но и местного производства!</p>
+                        </li>
+                    </ul>
+                </div>
                 <li class="advantage-list-item">
                     <h3>Там есть Мост дьявола</h3>
                     <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -61,23 +77,7 @@
                 </li>
             </ol>
         </section>
-        <section class="feature">
-            <h2 class="visually-hidden">Особенности</h2>
-            <ul class="feature-list">
-                <li class="feature-list-item">
-                    <h3>Жильё</h3>
-                    <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-                </li>
-                <li class="feature-list-item">
-                    <h3>Еда</h3>
-                    <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-                </li>
-                <li class="feature-list-item">
-                    <h3>Сувениры</h3>
-                    <p>Не только китайского, но и местного производства!</p>
-                </li>
-            </ul>
-        </section>
+
         <section class="search">
             <h2>Заинтересовались?</h2>
             <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
@@ -93,23 +93,23 @@
                 <input type="number" name="search-form-child" id="search-form-child" placeholder="0">
                 <button type="submit">Найти</button>
             </form>
+            <img class="map-image" src="img/map.png" alt="Карта штата" width="1199" height="594">
         </section>
     </main>
-    <footer>
-        <img class="map-image" src="img/map.png" alt="Карта штата" width="1199" height="594">
+    <footer class="page-footer main-footer">
         <p class="contacts">
-            #visitsedona<br>
-            ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a>
+            <a href="#" class="contacts-hashtag">#visitsedona</a><br>
+            ТЕЛ: <a class="contacts-phone" href="tel:+74956660166">+7(495) 666-01-66</a>
         </p>
         <ul class="social-list">
             <li class="social-list-item">
-                <a href="#">Twitter</a>
+                <a class="social-button" href="#">Twitter</a>
             </li>
             <li class="social-list-item">
-                <a href="#">facebook</a>
+                <a class="social-button" href="#">Facebook</a>
             </li>
             <li class="social-list-item">
-                <a href="#">Youtube</a>
+                <a class="social-button" href="#">Youtube</a>
             </li>
         </ul>
         <p class="developed">

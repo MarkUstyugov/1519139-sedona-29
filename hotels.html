@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,8 @@
     <title>Гостиницы</title>
 </head>
 
-<body>
-    <header>
+<body class="page-body">
+    <header class="main-header">
         <nav class="main-nav">
             <a class="logo">
                 <img src="img/logo.svg" alt="Логотип сайта Седона" width="138" height="70">
@@ -37,33 +37,32 @@
                 <fieldset>
                     <legend>Инфраструктура</legend>
                     <label for="filters-form-facilities-value-1">Бассейн</label>
-                <input type="checkbox" name="filters-form-facilities" id="filters-form-facilities-value-1" checked
-                    value="1">
-                <label for="filters-form-facilities-value-2">Парковка</label>
-                <input type="checkbox" name="filters-form-facilities" id="filters-form-facilities-value-2" value="2">
-                <label for="filters-form-facilities-value-3">Wi-fi</label>
-                <input type="checkbox" name="filters-form-facilities" id="filters-form-facilities-value-3" value="3">
+                    <input type="checkbox" name="filters-form-facilities" id="filters-form-facilities-value-1" checked value="1">
+                    <label for="filters-form-facilities-value-2">Парковка</label>
+                    <input type="checkbox" name="filters-form-facilities" id="filters-form-facilities-value-2" value="2">
+                    <label for="filters-form-facilities-value-3">Wi-fi</label>
+                    <input type="checkbox" name="filters-form-facilities" id="filters-form-facilities-value-3" value="3">
                 </fieldset>
                 <fieldset>
                     <legend>Тип жилья</legend>
                     <label for="filters-form-accommodation-value-1">Гостиница:</label>
-                    <input type="checkbox" name="filters-form-accommodation" id="filters-form-accommodation-value-1"
-                        checked value="1">
+                    <input type="checkbox" name="filters-form-accommodation" id="filters-form-accommodation-value-1" checked value="1">
                     <label for="filters-form-accommodation-value-2">Мотель:</label>
-                    <input type="checkbox" name="filters-form-accommodation" id="filters-form-accommodation-value-2"
-                        checked value="2">
+                    <input type="checkbox" name="filters-form-accommodation" id="filters-form-accommodation-value-2" checked value="2">
                     <label for="filters-form-accommodation-value-3">Апартаменты:</label>
-                    <input type="checkbox" name="filters-form-accommodation" id="filters-form-accommodation-value-3"
-                        checked value="3">
+                    <input type="checkbox" name="filters-form-accommodation" id="filters-form-accommodation-value-3" checked value="3">
                 </fieldset>
                 <fieldset>
                     <legend>Стоймость в сутки (Р):</legend>
                     <label for="filters-form-price-from" class="visually-hidden">от</label>
-                    <input type="text" name="filters-form-price-from" id="filters-form-price-from" placeholder="от 0">
+                    <input type="number" name="filters-form-price-from" id="filters-form-price-from" placeholder="от 0">
                     <label for="filters-form-price-to" class="visually-hidden">до</label>
-                    <input type="text" name="filters-form-price-to" id="filters-form-price-to" placeholder="до 3000">
-                    <input type="range" min="0" step="1" max="3000">
-                    <button type="button">Показать</button>
+                    <input type="number" name="filters-form-price-to" id="filters-form-price-to" placeholder="до 3000">
+                    <div class="slider-range">
+                        <button type="slider-range-button" class="slider-range-from">От</button>
+                        <button type="slider-range-button" class="slider-range-to">До</button>
+                    </div>
+                    <button type="submit">Показать</button>
                 </fieldset>
             </form>
         </section>
@@ -81,34 +80,75 @@
                     <a href="#">По по рейтингу</a>
                 </li>
             </ul>
+            <button class="sort-button" type="button" disabled>По возрастанию</button>
+            <button class="sort-button" type="button">По убыванию</button>
         </section>
         <section class="catalog">
             <h2 class="visually-hidden">Каталог</h2>
             <ul class="catalog-list">
                 <li class="catalog-list-item">
                     <h3>Amara Resort & Spa</h3>
-                    <img src="img/photo1.jpg" alt="фото гостиницы Amara Resort & Spa" width="135" height="90">
-                    <a href="#" class="more-btn">Подробнее</a>
-                    <a href="#" class="order-btn">Забронировать</a>
+                    <img src="img/amara-resort-thumbnail.jpg" alt="фото гостиницы Amara Resort & Spa" width="135"
+                        height="90">
+                    <p class="catalog-list-item-type">Гостиница</p>
+                    <p class="catalog-list-item-price">От 4000 Р.</p>
+                    <a href="#" class="more-button">Подробнее</a>
+                    <a href="#" class="order-button">Забронировать</a>
+                    <div class="rating">
+                        <ul class="rating-list">
+                            <li class="rating-list-item"></li>
+                            <li class="rating-list-item"></li>
+                            <li class="rating-list-item"></li>
+                            <li class="rating-list-item"></li>
+                        </ul>
+                        <p class="rating-digit">
+                            Рейтинг: 8,5
+                        </p>
+                    </div>
                 </li>
                 <li class="catalog-list-item">
                     <h3>Desert Quail Inn</h3>
-                    <img src="img/photo2.jpg" alt="фото мотеля Desert Quail Inn" width="135" height="90">
-                    <a href="#" class="more-btn">Подробнее</a>
-                    <a href="#" class="order-btn">Забронировать</a>
+                    <img src="img/desert-quail-inn-thumbnail.jpg" alt="фото мотеля Desert Quail Inn" width="135"
+                        height="90">
+                    <p class="catalog-list-item-type">Мотель</p>
+                    <p class="catalog-list-item-price">От 3000 Р.</p>
+                    <a href="#" class="more-button">Подробнее</a>
+                    <a href="#" class="order-button">Забронировать</a>
+                    <div class="rating">
+                        <ul class="rating-list">
+                            <li class="rating-list-item"></li>
+                            <li class="rating-list-item"></li>
+                            <li class="rating-list-item"></li>
+                        </ul>
+                        <p class="rating-digit">
+                            Рейтинг: 8,9
+                        </p>
+                    </div>
                 </li>
                 <li class="catalog-list-item">
                     <h3>Villas at Poco Diablo</h3>
-                    <img src="img/photo3.jpg" alt="фото аппартоментов Villas at Poco Diablo" width="135" height="90">
-                    <a href="#" class="more-btn">Подробнее</a>
-                    <a href="#" class="order-btn">Забронировать</a>
+                    <img src="img/villas-at-poco-diablo-thumbnail.jpg" alt="фото аппартоментов Villas at Poco Diablo"
+                        width="135" height="90">
+                    <p class="catalog-list-item-type">Гостиница</p>
+                    <p class="catalog-list-item-price">От 2000 Р.</p>
+                    <a href="#" class="more-button">Подробнее</a>
+                    <a href="#" class="order-button">Забронировать</a>
+                    <div class="rating">
+                        <ul class="rating-list">
+                            <li class="rating-list-item"></li>
+                            <li class="rating-list-item"></li>
+                        </ul>
+                        <p class="rating-digit">
+                            Рейтинг: 9,2
+                        </p>
+                    </div>
                 </li>
             </ul>
         </section>
     </main>
-    <footer>
+    <footer class="page-footer main-footer">
         <p class="contacts">
-            #visitsedona<br>
+            <a href="#" class="contacts-hashtag">#visitsedona</a><br>
             ТЕЛ: <a href="tel:+74956660166">+7(495) 666-01-66</a>
         </p>
         <ul class="social-list">
