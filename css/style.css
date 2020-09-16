@@ -1,24 +1,132 @@
-/* .welcome {
-    position: relative;
-    width: 1200px;
-    height: 509px;
-    background: url(../img/promo.jpg) no-repeat;
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-black-extra: #333333;
+  --basic-white: #ffffff;
+  --basic-blue: #81b3d2;
+  --basic-blue-hover: #669eC0;
+  --basic-blue-active: #5496bd;
+  --basic-brown: #766357;
+  --basic-brown-hover: #604e43;
+  --basic-brown-active: #503e33;
+  --basic-grey: #f2f2f2;
+  --basic-grey-hover: #ebebeb;
+  --basic-grey-background: #eeeeee;
 }
 
-.welcome::after {
-    content: url(../img/welcome-bottom.png);
-    position: absolute;
-    bottom: -4px;
+/* Global */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-black);
+  background-color: var(--basic-grey);
+  text-transform: uppercase;
+  /* text-align: center; */
 }
 
-.welcome-bottom {
-    position: absolute;
-    bottom: 0px;
+a {
+  text-decoration: none;
 }
 
-.welcome-title {
-    position: absolute;
-    top: 77px;
-    left: 371px;
-} */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
+/* Main navigation */
+
+.main-header{
+  background-color: var(--basic-white);
+}
+
+.main-nav {
+  font-weight: bold;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover {
+  color: var(--basic-blue);
+}
+
+.site-navigation a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.site-navigation-current a:not([href]) {
+  color: var(--basic-brown);
+}
+
+/* Advantages */
+
+.advantages p {
+  color: var(--basic-black-extra);
+}
+
+.feature-list {
+  list-style: none;
+}
+
+/* Button */
+
+.button {
+  color: var(--basic-white);
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+}
+
+.search-button,
+.order-button {
+  background-color: var(--basic-brown);
+}
+
+.more-button {
+  background-color: var(--basic-blue);
+}
+
+.show-button {
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+/* Search */
+
+.search p {
+  line-height: 24px;
+}
+
+/* Footer */
+
+.main-footer {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.contacts {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+
+}
+
+.contacts a {
+  color: var(--basic-black);
+}
