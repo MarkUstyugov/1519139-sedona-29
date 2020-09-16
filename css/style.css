@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -73,9 +77,25 @@ img {
 }
 
 /* Advantages */
+.advantages {
+  background-color: var(--basic-white);
+}
+
+.advantages h2 {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.advantages h3 {
+  font-size: 21px;
+}
 
 .advantages p {
   color: var(--basic-black-extra);
+}
+
+.advantage-list-item:nth-of-type(n+3) {
+  background-color: var(--basic-grey);
 }
 
 .feature-list {
@@ -98,6 +118,10 @@ img {
   background-color: var(--basic-brown);
 }
 
+.search-button {
+  font-size: 21px;
+}
+
 .more-button {
   background-color: var(--basic-blue);
 }
@@ -108,7 +132,27 @@ img {
   background-color: transparent;
 }
 
+/* Social*/
+
+.social-button:hover {
+  background-color: var(--basic-blue-hover);
+}
+
+.social-button:active {
+  background-color: var(--basic-blue-active);
+}
+
+
+
 /* Search */
+
+.search {
+  background-color: var(--basic-white);
+}
+
+.search h2 {
+  font-size: 30px;
+}
 
 .search p {
   line-height: 24px;
@@ -130,3 +174,27 @@ img {
 .contacts a {
   color: var(--basic-black);
 }
+
+/* Search form */
+
+.search-form label,
+.search-form input,
+.search-form input::placeholder {
+  color: var(--basic-black);
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.search-form input[type="text"] {
+  color: var(--basic-black);
+  background-color: var(--basic-grey);
+}
+
+.find-button {
+  font-size: 21px;
+  background-color: var(--basic-blue);
+}
+
+/* Hotels */
+
