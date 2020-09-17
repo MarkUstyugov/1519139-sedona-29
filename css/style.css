@@ -13,6 +13,7 @@
   --basic-grey: #f2f2f2;
   --basic-grey-hover: #ebebeb;
   --basic-grey-background: #eeeeee;
+  --basic-grey-extra: #bdbbbc;
 }
 
 /* Global */
@@ -55,10 +56,6 @@ img {
   color: var(--basic-black);
 }
 
-.site-navigation {
-  list-style: none;
-}
-
 .site-navigation a {
   color: var(--basic-black);
 }
@@ -99,10 +96,6 @@ img {
   background-color: var(--basic-grey);
 }
 
-.feature-list {
-  list-style: none;
-}
-
 /* Button */
 
 .button {
@@ -133,20 +126,11 @@ img {
   background-color: transparent;
 }
 
-/* Social*/
-
-.social-button:hover {
-  background-color: var(--basic-blue-hover);
-}
-
-.social-button:active {
-  background-color: var(--basic-blue-active);
-}
-
 /* Search */
 
 .search {
   background-color: var(--basic-white);
+  text-align: center;
 }
 
 .search h2 {
@@ -155,23 +139,6 @@ img {
 
 .search p {
   line-height: 24px;
-}
-
-/* Footer */
-
-.main-footer {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.contacts {
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 26px;
-
-}
-
-.contacts a {
-  color: inherit;
 }
 
 /* Search form */
@@ -193,6 +160,41 @@ img {
 .find-button {
   font-size: 21px;
   background-color: var(--basic-blue);
+}
+
+/* Footer */
+
+.main-footer {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.contacts {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+}
+
+.contacts a {
+  color: inherit;
+}
+
+.developed {
+  text-align: center;
+}
+
+/* Social*/
+.social-list-item {
+  background-color: var(--basic-blue);
+  text-align: center;
+}
+
+.social-button:hover {
+  background-color: var(--basic-blue-hover);
+}
+
+.social-button:active {
+  background-color: var(--basic-blue-active);
 }
 
 /* Hotels */
