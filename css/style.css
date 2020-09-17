@@ -18,6 +18,7 @@
 /* Global */
 
 body {
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -27,14 +28,13 @@ body {
   color: var(--basic-black);
   background-color: var(--basic-grey);
   text-transform: uppercase;
-  /* text-align: center; */
 }
 
-a {
+.page a {
   text-decoration: none;
 }
 
-ul {
+.page ul {
   list-style: none;
 }
 
@@ -79,6 +79,7 @@ img {
 /* Advantages */
 .advantages {
   background-color: var(--basic-white);
+  text-align: center;
 }
 
 .advantages h2 {
@@ -142,8 +143,6 @@ img {
   background-color: var(--basic-blue-active);
 }
 
-
-
 /* Search */
 
 .search {
@@ -172,7 +171,7 @@ img {
 }
 
 .contacts a {
-  color: var(--basic-black);
+  color: inherit;
 }
 
 /* Search form */
@@ -180,7 +179,7 @@ img {
 .search-form label,
 .search-form input,
 .search-form input::placeholder {
-  color: var(--basic-black);
+  color: inherit;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 26px;
