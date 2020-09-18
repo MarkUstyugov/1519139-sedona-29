@@ -14,6 +14,8 @@
   --basic-grey-hover: #ebebeb;
   --basic-grey-background: #eeeeee;
   --basic-grey-extra: #bdbbbc;
+  --basic-text-opacity: rgba(255, 255, 255, 0.3);
+  --basic-text-black-opacity: rgba(0, 0, 0, 0.3);
 }
 
 /* Global */
@@ -74,6 +76,7 @@ img {
 }
 
 /* Advantages */
+
 .advantages {
   background-color: var(--basic-white);
   text-align: center;
@@ -116,8 +119,28 @@ img {
   font-size: 21px;
 }
 
+.search-button:hover,
+.order-button:hover {
+  background-color: var(--basic-brown-hover);
+}
+
+.search-button:active,
+.order-button:active {
+  background-color: var(--basic-brown-active);
+  color: var(--basic-text-opacity);
+}
+
 .more-button {
   background-color: var(--basic-blue);
+}
+
+.more-button:hover {
+  background-color: var(--basic-blue-hover);
+}
+
+.more-button:active {
+  background-color: var(--basic-blue-active);
+  color: var(--basic-text-opacity);
 }
 
 .show-button {
@@ -152,14 +175,34 @@ img {
   line-height: 26px;
 }
 
-.search-form input[type="text"] {
-  color: var(--basic-black);
+.search-form input[type="text"],
+.search-form input[type="number"] {
+  color: inherit;
   background-color: var(--basic-grey);
+}
+
+.search-form input[type="text"]:hover,
+.search-form input[type="number"]:hover {
+  background-color: var(--basic-grey-hover);
+}
+
+.search-form input[type="text"]:focus,
+.search-form input[type="number"]:focus {
+  background-color: var(--basic-white);
 }
 
 .find-button {
   font-size: 21px;
   background-color: var(--basic-blue);
+}
+
+.find-button:hover {
+  background-color: var(--basic-blue-hover);
+}
+
+.find-button:active {
+  background-color: var(--basic-blue-active);
+  color: var(--basic-text-opacity);
 }
 
 /* Footer */
@@ -184,18 +227,129 @@ img {
 }
 
 /* Social*/
+
 .social-list-item {
   background-color: var(--basic-blue);
   text-align: center;
 }
 
-.social-button:hover {
+.social-list-item:hover {
   background-color: var(--basic-blue-hover);
 }
 
-.social-button:active {
+.social-list-item:active {
   background-color: var(--basic-blue-active);
 }
 
-/* Hotels */
+.social-list-item:active svg{
+  opacity: 0.3;
+}
 
+/* Sort */
+
+.sort {
+  background-color: var(--basic-white);
+}
+
+.sort h2 {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.sort p {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.sort-list-item {
+  font-size: 12px;
+  line-height: 18px;
+
+}
+
+.sort-list-item-link {
+  color: var(--basic-text-black-opacity);
+  border-bottom: 1px dotted var(--basic-blue);
+}
+
+.sort-list-item-link-current {
+  color: var(--basic-blue);
+  border: none;
+}
+
+.sort-list-item-link:hover {
+  color: var(--basic-blue);
+  border-bottom: 1px dotted var(--basic-blue);
+}
+
+.sort-list-item-link:active {
+  color: var(--basic-black);
+  border: none;
+}
+
+.sort-list-item-link-current:hover,
+.sort-list-item-link-current:active {
+  color: var(--basic-blue);
+  border: none;
+}
+
+.sort-range-button:hover path{
+  fill: var(--basic-black);
+}
+
+.sort-range-button:active path{
+  fill: var(--basic-blue);
+}
+
+sort-range-button-current path{
+  fill: var(--basic-blue);
+}
+
+/* Catalog */
+
+.catalog {
+  background-color: var(--basic-white);
+}
+
+.catalog-list-item-link {
+  color: inherit;
+}
+
+.catalog-list-item-link:hover {
+  color: var(--basic-blue);
+}
+
+.catalog-list-item-link:active {
+  color: var(--basic-text-black-opacity);
+}
+
+.catalog-list-item-type,
+.catalog-list-item-price {
+  color: var(--basic-black-extra);
+}
+
+.rating-digit {
+  background-color: var(--basic-grey);
+}
+
+/* Filters */
+
+.filter {
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+}
+
+.filter legend {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.show-button {
+  font-weight: 400;
+}
+
+.filter input[type="number"]::placeholder{
+  color: var(--basic-white);
+}

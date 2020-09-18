@@ -14,7 +14,7 @@
 <body class="page-body">
   <header class="main-header">
     <nav class="main-nav">
-      <a class="logo">
+      <a href="index.html" class="logo">
         <img src="img/logo.svg" alt="Логотип сайта Седона" width="138" height="70">
       </a>
       <ul class="site-navigation">
@@ -39,7 +39,7 @@
       <h2 class="visually-hidden">Фильтры:</h2>
       <form action="#" method="GET" class="filters-form" id="filters-form">
         <fieldset>
-          <legend>Инфраструктура</legend>
+          <legend>Инфраструктура:</legend>
           <label for="filters-form-facilities-value-1">Бассейн</label>
           <input type="checkbox" name="filters-form-facilities" id="filters-form-facilities-value-1" checked value="1">
           <label for="filters-form-facilities-value-2">Парковка</label>
@@ -48,14 +48,14 @@
           <input type="checkbox" name="filters-form-facilities" id="filters-form-facilities-value-3" value="3">
         </fieldset>
         <fieldset>
-          <legend>Тип жилья</legend>
-          <label for="filters-form-accommodation-value-1">Гостиница:</label>
+          <legend>Тип жилья:</legend>
+          <label for="filters-form-accommodation-value-1">Гостиница</label>
           <input type="checkbox" name="filters-form-accommodation" id="filters-form-accommodation-value-1" checked
             value="1">
-          <label for="filters-form-accommodation-value-2">Мотель:</label>
+          <label for="filters-form-accommodation-value-2">Мотель</label>
           <input type="checkbox" name="filters-form-accommodation" id="filters-form-accommodation-value-2" checked
             value="2">
-          <label for="filters-form-accommodation-value-3">Апартаменты:</label>
+          <label for="filters-form-accommodation-value-3">Апартаменты</label>
           <input type="checkbox" name="filters-form-accommodation" id="filters-form-accommodation-value-3" checked
             value="3">
         </fieldset>
@@ -78,13 +78,13 @@
       <p>Найдено: 3</p>
       <ul class="sort-lits">
         <li class="sort-list-item">
-          <a href="#">По цене</a>
+          <a href="#" class="sort-list-item-link sort-list-item-link-current">По цене</a>
         </li>
         <li class="sort-list-item">
-          <a href="#">По типу</a>
+          <a href="#" class="sort-list-item-link">По типу</a>
         </li>
         <li class="sort-list-item">
-          <a href="#">По по рейтингу</a>
+          <a href="#" class="sort-list-item-link">По по рейтингу</a>
         </li>
       </ul>
       <ul class="sort-range-list">
@@ -96,21 +96,19 @@
           </a>
         </li>
         <li>
-          <a href="#" class="sort-range-button">
+          <a href="#" class="sort-range-button sort-range-button-current">
             <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.5 10L0 0H11" fill="#81B3D2" />
             </svg>
           </a>
         </li>
       </ul>
-      <!-- <button class="sort-button" type="button" disabled>По возрастанию</button>
-      <button class="sort-button" type="button">По убыванию</button> -->
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Каталог</h2>
       <ul class="catalog-list">
         <li class="catalog-list-item">
-          <h3><a href="#">Amara Resort & Spa</a></h3>
+          <h3><a href="#" class="catalog-list-item-link">Amara Resort & Spa</a></h3>
           <img src="img/amara-resort-thumbnail.jpg" alt="фото гостиницы Amara Resort & Spa" width="135" height="90">
           <p class="catalog-list-item-type">Гостиница</p>
           <p class="catalog-list-item-price">От 4000 Р.</p>
@@ -153,7 +151,7 @@
           </div>
         </li>
         <li class="catalog-list-item">
-          <h3><a href="#">Desert Quail Inn</a></h3>
+          <h3><a href="#" class="catalog-list-item-link">Desert Quail Inn</a></h3>
           <img src="img/desert-quail-inn-thumbnail.jpg" alt="фото мотеля Desert Quail Inn" width="135" height="90">
           <p class="catalog-list-item-type">Мотель</p>
           <p class="catalog-list-item-price">От 3000 Р.</p>
@@ -189,7 +187,7 @@
           </div>
         </li>
         <li class="catalog-list-item">
-          <h3><a href="#">Villas at Poco Diablo</a></h3>
+          <h3><a href="#" class="catalog-list-item-link">Villas at Poco Diablo</a></h3>
           <img src="img/villas-at-poco-diablo-thumbnail.jpg" alt="фото аппартоментов Villas at Poco Diablo" width="135"
             height="90">
           <p class="catalog-list-item-type">Гостиница</p>
