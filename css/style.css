@@ -3,18 +3,19 @@
 :root {
   --basic-black: #000000;
   --basic-black-extra: #333333;
+  --basic-black-light: #666666;
   --basic-white: #ffffff;
   --basic-blue: #81b3d2;
-  --basic-blue-hover: #669eC0;
-  --basic-blue-active: #5496bd;
+  --basic-blue-dark: #669eC0;
+  --basic-blue-darker: #5496bd;
   --basic-brown: #766357;
-  --basic-brown-hover: #604e43;
-  --basic-brown-active: #503e33;
+  --basic-brown-dark: #604e43;
+  --basic-brown-darker: #503e33;
   --basic-grey: #f2f2f2;
-  --basic-grey-hover: #ebebeb;
+  --basic-grey-dark: #ebebeb;
   --basic-grey-background: #eeeeee;
   --basic-grey-extra: #bdbbbc;
-  --basic-text-opacity: rgba(255, 255, 255, 0.3);
+  --basic-text-white-opacity: rgba(255, 255, 255, 0.3);
   --basic-text-black-opacity: rgba(0, 0, 0, 0.3);
 }
 
@@ -46,6 +47,14 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 /* Main navigation */
 
 .main-header{
@@ -73,13 +82,30 @@ img {
 
 .site-navigation-current a:not([href]) {
   color: var(--basic-brown);
+  cursor: pointer;
+}
+
+/* .site-navigation-item {
+  text-align: left;
+}
+
+.site-navigation-item:nth-child(n+3) {
+  text-align: right;
+} */
+
+/* Welcome */
+
+.welcome {
+  background-image: url(../img/welcome-bottom.svg), url(../img/welcome-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 0% 100%, 0% 0%;
 }
 
 /* Advantages */
 
 .advantages {
   background-color: var(--basic-white);
-  text-align: center;
+  /* text-align: center; */
 }
 
 .advantages h2 {
@@ -121,13 +147,13 @@ img {
 
 .search-button:hover,
 .order-button:hover {
-  background-color: var(--basic-brown-hover);
+  background-color: var(--basic-brown-dark);
 }
 
 .search-button:active,
 .order-button:active {
-  background-color: var(--basic-brown-active);
-  color: var(--basic-text-opacity);
+  background-color: var(--basic-brown-darker);
+  color: var(--basic-text-white-opacity);
 }
 
 .more-button {
@@ -135,12 +161,12 @@ img {
 }
 
 .more-button:hover {
-  background-color: var(--basic-blue-hover);
+  background-color: var(--basic-blue-dark);
 }
 
 .more-button:active {
-  background-color: var(--basic-blue-active);
-  color: var(--basic-text-opacity);
+  background-color: var(--basic-blue-darker);
+  color: var(--basic-text-white-opacity);
 }
 
 .show-button {
@@ -179,16 +205,23 @@ img {
 .search-form input[type="number"] {
   color: inherit;
   background-color: var(--basic-grey);
+  border: none;
+  width: 346px;
+  height: 38px;
+  box-sizing: border-box;
 }
 
 .search-form input[type="text"]:hover,
 .search-form input[type="number"]:hover {
-  background-color: var(--basic-grey-hover);
+  background-color: var(--basic-grey-dark);
+  border: none;
 }
 
 .search-form input[type="text"]:focus,
 .search-form input[type="number"]:focus {
   background-color: var(--basic-white);
+  border: 2px solid #E5E5E5;
+  outline: none;
 }
 
 .find-button {
@@ -197,12 +230,12 @@ img {
 }
 
 .find-button:hover {
-  background-color: var(--basic-blue-hover);
+  background-color: var(--basic-blue-dark);
 }
 
 .find-button:active {
-  background-color: var(--basic-blue-active);
-  color: var(--basic-text-opacity);
+  background-color: var(--basic-blue-darker);
+  color: var(--basic-text-white-opacity);
 }
 
 /* Footer */
@@ -234,11 +267,11 @@ img {
 }
 
 .social-list-item:hover {
-  background-color: var(--basic-blue-hover);
+  background-color: var(--basic-blue-dark);
 }
 
 .social-list-item:active {
-  background-color: var(--basic-blue-active);
+  background-color: var(--basic-blue-darker);
 }
 
 .social-list-item:active svg{
@@ -331,6 +364,7 @@ sort-range-button-current path{
 }
 
 .rating-digit {
+  color: var(--basic-black-light);
   background-color: var(--basic-grey);
 }
 
@@ -338,12 +372,19 @@ sort-range-button-current path{
 
 .filter {
   color: var(--basic-white);
+  background-image: url("../img/filter-bg.jpg");
+  background-repeat: no-repeat;
   background-color: var(--basic-black);
+}
+
+.filter fieldset {
+  border: none;
 }
 
 .filter legend {
   font-size: 16px;
   font-weight: 700;
+  border: none;
 }
 
 .show-button {
@@ -351,5 +392,13 @@ sort-range-button-current path{
 }
 
 .filter input[type="number"]::placeholder{
+  text-transform: uppercase;
   color: var(--basic-white);
+}
+
+.filter input[type="number"] {
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: transparent;
+  border-color: var(--basic-white);
 }
