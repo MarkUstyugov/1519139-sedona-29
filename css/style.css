@@ -62,27 +62,33 @@ img {
 }
 
 .main-nav {
-  font-weight: bold;
+  font-size: inherit;
   line-height: 26px;
+  font-weight: 700;
   color: var(--basic-black);
 }
 
-.site-navigation a {
+.site-navigation-item-link {
   color: var(--basic-black);
 }
 
-.site-navigation a:hover {
+.site-navigation-item-link:hover {
   color: var(--basic-blue);
 }
 
-.site-navigation a:active {
+.site-navigation-item-link:active {
   color: var(--basic-black);
   opacity: 0.3;
 }
 
-.site-navigation-current a:not([href]) {
+.site-navigation-item-link:not([href]) {
   color: var(--basic-brown);
   cursor: pointer;
+}
+
+.site-navigation-item-link:active:not([href]) {
+  color: var(--basic-brown);
+  opacity: inherit;
 }
 
 /* .site-navigation-item {
@@ -108,21 +114,29 @@ img {
   /* text-align: center; */
 }
 
-.advantages h2 {
+.advantages-title {
   font-size: 21px;
   line-height: 26px;
 }
 
-.advantages h3 {
+.advantage-list-item-subtitle {
   font-size: 21px;
+  line-height: 21px;
 }
 
-.advantages p {
+.advantages-text {
   color: var(--basic-black-extra);
 }
 
 .advantage-list-item:nth-of-type(n+3) {
   background-color: var(--basic-grey);
+}
+
+/* Feature */
+
+.feature-list-item-subtitle {
+  font-size: 21px;
+  line-height: 21px;
 }
 
 /* Button */
@@ -143,6 +157,7 @@ img {
 
 .search-button {
   font-size: 21px;
+  line-height: 26px;
 }
 
 .search-button:hover,
@@ -182,27 +197,29 @@ img {
   text-align: center;
 }
 
-.search h2 {
+.search-title {
   font-size: 30px;
+  line-height: 21px;
 }
 
-.search p {
+.search-text {
+  font-size: 14px;
   line-height: 24px;
 }
 
 /* Search form */
 
-.search-form label,
-.search-form input,
-.search-form input::placeholder {
+.search-form-label,
+.search-form-input,
+.search-form-input::placeholder {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
   color: inherit;
   text-transform: uppercase;
-  font-weight: 700;
-  line-height: 26px;
 }
 
-.search-form input[type="text"],
-.search-form input[type="number"] {
+.search-form-input {
   color: inherit;
   background-color: var(--basic-grey);
   border: none;
@@ -211,14 +228,12 @@ img {
   box-sizing: border-box;
 }
 
-.search-form input[type="text"]:hover,
-.search-form input[type="number"]:hover {
+.search-form-input:hover {
   background-color: var(--basic-grey-dark);
   border: none;
 }
 
-.search-form input[type="text"]:focus,
-.search-form input[type="number"]:focus {
+.search-form input:focus {
   background-color: var(--basic-white);
   border: 2px solid #E5E5E5;
   outline: none;
@@ -226,6 +241,7 @@ img {
 
 .find-button {
   font-size: 21px;
+  line-height: 26px;
   background-color: var(--basic-blue);
 }
 
@@ -246,12 +262,13 @@ img {
 
 .contacts {
   font-size: 21px;
-  font-weight: 700;
   line-height: 26px;
+  font-weight: 700;
   text-align: center;
 }
 
-.contacts a {
+.contacts-hashtag,
+.contacts-phone {
   color: inherit;
 }
 
@@ -259,7 +276,17 @@ img {
   text-align: center;
 }
 
-/* Social*/
+/* Footer-developed */
+
+.developed-link:hover path {
+  fill: var(--basic-blue);
+}
+
+.developed-link:active path {
+  fill: var(--basic-grey-extra);
+}
+
+/* Footer-social*/
 
 .social-list-item {
   background-color: var(--basic-blue);
@@ -284,13 +311,13 @@ img {
   background-color: var(--basic-white);
 }
 
-.sort h2 {
+.sort-title {
   font-size: 12px;
   line-height: 18px;
   font-weight: normal;
 }
 
-.sort p {
+.sort-text {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -299,7 +326,6 @@ img {
 .sort-list-item {
   font-size: 12px;
   line-height: 18px;
-
 }
 
 .sort-list-item-link {
@@ -336,7 +362,7 @@ img {
   fill: var(--basic-blue);
 }
 
-sort-range-button-current path{
+.sort-range-button-current path{
   fill: var(--basic-blue);
 }
 
@@ -372,17 +398,25 @@ sort-range-button-current path{
 
 .filter {
   color: var(--basic-white);
-  background-image: url("../img/filter-bg.jpg");
-  background-repeat: no-repeat;
-  background-color: var(--basic-black);
+  /* background-color: var(--basic-black); */
+  position: relative;
 }
 
-.filter fieldset {
+.filter::before {
+  content: url("../img/welcome-bg.jpg");
+  filter: blur(10px);
+  position: absolute;
+  top: -250px;
+  z-index: -1;
+}
+
+.filter-unit {
   border: none;
 }
 
-.filter legend {
+.filter-unit-subtitle {
   font-size: 16px;
+  line-height: 21px;
   font-weight: 700;
   border: none;
 }
@@ -391,14 +425,14 @@ sort-range-button-current path{
   font-weight: 400;
 }
 
-.filter input[type="number"]::placeholder{
-  text-transform: uppercase;
-  color: var(--basic-white);
-}
-
-.filter input[type="number"] {
+.filter-input[type="number"] {
   color: var(--basic-white);
   text-transform: uppercase;
   background-color: transparent;
   border-color: var(--basic-white);
+}
+
+.filter-input[type="number"]::placeholder{
+  text-transform: uppercase;
+  color: var(--basic-white);
 }
