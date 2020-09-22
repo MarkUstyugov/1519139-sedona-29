@@ -129,7 +129,7 @@ img {
 }
 
 .advantage-list-item:nth-of-type(n+3) {
-  background-color: var(--basic-grey);
+  background-color: var(--basic-grey-background);
 }
 
 /* Feature */
@@ -273,6 +273,8 @@ img {
 }
 
 .developed {
+  font-size: inherit;
+  line-height: 26px;
   text-align: center;
 }
 
@@ -398,17 +400,17 @@ img {
 
 .filter {
   color: var(--basic-white);
-  /* background-color: var(--basic-black); */
-  position: relative;
+  background-color: var(--basic-black);
+  /* position: relative; */
 }
 
-.filter::before {
+/* .filter::before {
   content: url("../img/welcome-bg.jpg");
   filter: blur(10px);
   position: absolute;
   top: -250px;
   z-index: -1;
-}
+} */
 
 .filter-unit {
   border: none;
