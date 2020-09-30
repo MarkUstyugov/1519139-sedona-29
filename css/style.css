@@ -95,8 +95,10 @@ img {
   grid-column-end: -1;
   grid-row-start: 1;
   grid-row-end: 2;
+  align-items: center;
 
-  padding: 0 70px;
+  padding: 0;
+  margin: 0;
 }
 
 .site-navigation-item-link {
@@ -122,6 +124,14 @@ img {
   opacity: inherit;
 }
 
+.site-navigation-item:first-child {
+  margin-left: 70px;
+}
+
+.site-navigation-item:last-child {
+  margin-right: 70px;
+}
+
 .site-navigation-item {
   text-align: left;
 }
@@ -134,7 +144,7 @@ img {
 
 .main-container {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
 }
 
 /* Welcome */
@@ -142,15 +152,19 @@ img {
 .welcome {
   height: 509px;
   background-image: url(../img/welcome-mask-bottom.png), url(../img/welcome-bg.jpg);
-  background-repeat: no-repeat;
+  background-repeat: no-repeat, no-repeat;
   background-position: bottom;
   margin: 0;
   padding: 0;
-  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
 }
 
 .welcome-title {
-  padding-top: 76px;
+  /* padding-top: 76px; */
 }
 
 /* Advantages */
