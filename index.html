@@ -50,7 +50,7 @@
               <h3 class="advantage-list-item-subtitle">Настоящий <br>городок</h3>
               <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <div class="advantage-list-item-image-right">
+            <div class="advantage-image advantage-list-item-image-right">
               <img src="img/advantage-sedona-streets.jpg" width="800" height="256" alt="Фотография бара">
             </div>
             <ul class="feature-list">
@@ -73,7 +73,7 @@
               <h3 class="advantage-list-item-subtitle">Там есть <br>Мост дьявола</h3>
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
-            <div class="advantage-list-item-image-left">
+            <div class="advantage-image advantage-list-item-image-left">
               <img src="img/advantage-devils-bridge.jpg" width="800" height="256"
                 alt="Фотография моста дъявола в Седоне">
             </div>
@@ -104,21 +104,31 @@
           седоне
         </p>
         <button type="button" class="button search-button">Поиск Гостиницы в седоне</button>
-        <form action="#" method="POST" id="search-form" class="search-form">
-          <label class="search-form-label" for="search-form-from">Дата заезда: </label>
-          <input class="search-form-input" type="text" name="search-form-from" id="search-form-from"
-            placeholder="24 апреля 2017">
-          <label class="search-form-label" for="search-form-to">Дата выезда: </label>
-          <input class="search-form-input" type="text" name="search-form-to" id="search-form-to"
-            placeholder="4 июня 2017">
-          <label class="search-form-label" for="search-form-adult">Взрослые: </label>
-          <input class="search-form-input search-form-input-small" type="number" name="search-form-adult"
-            id="search-form-adult" placeholder="2">
-          <label class="search-form-label test" for="search-form-child">Дети: </label>
-          <input class="search-form-input search-form-input-small" type="number" name="search-form-child"
-            id="search-form-child" placeholder="0">
-          <button type="submit" class="button find-button">Найти</button>
-        </form>
+        <div class="form-container">
+          <form action="#" method="POST" id="search-form" class="search-form">
+            <div class="form-field">
+              <label class="search-form-label" for="search-form-from">Дата заезда: </label>
+              <input class="search-form-input" type="text" name="search-form-from" id="search-form-from"
+                placeholder="24 апреля 2017">
+            </div>
+            <div class="form-field">
+              <label class="search-form-label" for="search-form-to">Дата выезда: </label>
+              <input class="search-form-input" type="text" name="search-form-to" id="search-form-to"
+                placeholder="4 июня 2017">
+            </div>
+            <div class="form-field multi-field">
+              <label class="search-form-label search-form-lable-adult" for="search-form-adult">Взрослые: </label>
+              <input class="search-form-input search-form-input-small adult" type="number" name="search-form-adult"
+                id="search-form-adult" placeholder="2">
+              <label class="search-form-label search-form-label-child" for="search-form-child">Дети: </label>
+              <input class="search-form-input search-form-input-small" type="number" name="search-form-child"
+                id="search-form-child" placeholder="0">
+            </div>
+            <div class="form-field form-field-button">
+              <button type="submit" class="button find-button">Найти</button>
+            </div>
+          </form>
+        </div>
         <!-- <div class="interactive-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d361488.4045600764!2d-110.41357238369437!3d35.135064545381574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872fa8161db2d857%3A0x550fb4980e35323c!2z0KXQvtC70LHRgNGD0LosINCQ0YDQuNC30L7QvdCwIDg2MDI1LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1601467868033!5m2!1sru!2sru"
