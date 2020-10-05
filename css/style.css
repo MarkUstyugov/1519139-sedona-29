@@ -30,7 +30,7 @@ body {
   color: var(--basic-black);
   background-color: var(--basic-grey);
   text-transform: uppercase;
-  position: relative;
+
 }
 
 .box {
@@ -41,6 +41,7 @@ body {
   align-content: start;
   margin: 0 auto;
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  position: relative;
 }
 
 .page a {
@@ -447,12 +448,13 @@ img {
   width: 346px;
   height: 38px;
   box-sizing: border-box;
-  padding: 10px 35px 10px 15px;
+  padding: 0 35px 0 15px;
+  box-sizing: border-box;
 }
 
 .search-form-input[type="number"] {
   width: 114px;
-  padding: 10px 15px;
+  padding: 0 38px;
   text-align: center;
 }
 
@@ -470,27 +472,97 @@ img {
   opacity: 1
 }
 
-.form-field{
+.form-field {
   position: relative;
 }
 
-.calender-icon {
+.calender-button {
+  position: absolute;
+  width: 39px;
+  height: 100%;
+  background-color: transparent;
+  background-image: url("../img/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.calender-button:hover {
+  background-image: url("../img/calendar-hover.svg");
+}
+
+.calender-button:active {
+  background-image: url("../img/calendar-active.svg");
+}
+
+.search-form-input-calender:hover + .calender-button{
+  background-color: transparent;
+}
+
+.search-form-input-calender:focus + .calender-button{
+  background-color: transparent;
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
+.minus-button {
+  position: absolute;
+  width: 38px;
+  height: 100%;
+  background-color: transparent;
+  background-image: url("../img/minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  top: 0px;
+  left: 0px;
+  box-sizing: border-box;
+}
+
+.minus-button:hover {
+  background-image: url("../img/minus-hover.svg");
+}
+
+.plus-button {
+  position: absolute;
+  width: 38px;
+  height: 100%;
+  background-color: transparent;
+  background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  top: 0px;
+  right: 0px;
+  box-sizing: border-box;
+}
+
+.plus-button:hover {
+  background-image: url("../img/plus-hover.svg");
+}
+
+/* .calender-icon {
   position: absolute;
   right: 7px;
   top: 7px;
-}
+} */
 
-.calender-icon:hover + .search-form-input {
+/* .calender-icon:hover + .search-form-input {
   background-color: var(--basic-grey-dark);
-}
+} */
 
-.calender-icon:hover path{
+/* .calender-icon:hover path{
   fill: var(--basic-black);
 }
 
 .calender-icon:active path{
   fill: var(--basic-blue);
-}
+} */
 
 .search-form-label-adult {
   position: relative
@@ -500,61 +572,6 @@ img {
   position: relative
 }
 
-.search-form-label-adult::after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 3px;
-  background-image: url("../img/minus.svg");
-  background-repeat: no-repeat;
-  top: 12px;
-  left: 125px;
-}
-
-.search-form-label-adult:hover::after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 3px;
-  background-image: url("../img/minus-hover.svg");
-  background-repeat: no-repeat;
-  top: 12px;
-  left: 125px;
-}
-
-.search-form-label-adult::before {
-  content: "";
-  position: absolute;
-  width: 11px;
-  height: 11px;
-  background-image: url("../img/plus.svg");
-  background-repeat: no-repeat;
-  top: 8px;
-  left: 200px;
-}
-
-.search-form-label-child::after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 3px;
-  background-image: url("../img/minus.svg");
-  background-repeat: no-repeat;
-  top: 12px;
-  left: 90px;
-}
-
-.search-form-label-child::before {
-  content: "";
-  position: absolute;
-  width: 11px;
-  height: 11px;
-  background-image: url("../img/plus.svg");
-  background-repeat: no-repeat;
-  top: 8px;
-  left: 165px;
-}
-
 .search-form-input:hover {
   background-color: var(--basic-grey-dark);
   border: none;
@@ -562,8 +579,8 @@ img {
 
 .search-form input:focus {
   background-color: var(--basic-white);
-  outline: 2px solid #E5E5E5;
-  outline-offset: -2px;
+  border: 2px solid #E5E5E5;
+  outline: none;
 }
 
 .find-button {
@@ -914,6 +931,12 @@ img {
   overflow: hidden;
 }
 
+.filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
 .form-wrapper::after {
   content: url("../img/welcome-bg.jpg");
   background-repeat: no-repeat;
@@ -923,11 +946,6 @@ img {
   left: 0;
   bottom: 0; right: 0;
   z-index: -1;
-}
-
-.filter-wrapper {
-  display: flex;
-  position: relative;
 }
 
 .filter-unit {
@@ -946,7 +964,7 @@ img {
 
 .filter-unit:nth-child(3) {
   margin-left: auto;
-  width: 317px;
+  flex-basis: 317px;
 }
 
 .filter-unit-subtitle {
