@@ -44,47 +44,49 @@
               <fieldset class="filter-unit">
                 <legend class="filter-unit-subtitle">Инфраструктура:</legend>
                 <div class="filter-unit-row">
-                  <input class="filter-input" type="checkbox" name="filters-form-facilities"
+                  <input class="filter-input visually-hidden" type="checkbox" name="filters-form-facilities"
                     id="filters-form-facilities-value-1" checked value="1">
-                  <label for="filters-form-facilities-value-1">Бассейн</label>
+                  <label class="label-checkbox" for="filters-form-facilities-value-1">Бассейн</label>
                 </div>
                 <div class="filter-unit-row">
-                  <input class="filter-input" type="checkbox" name="filters-form-facilities"
+                  <input class="filter-input visually-hidden" type="checkbox" name="filters-form-facilities"
                     id="filters-form-facilities-value-2" value="2">
-                  <label for="filters-form-facilities-value-2">Парковка</label>
+                  <label class="label-checkbox" for="filters-form-facilities-value-2">Парковка</label>
                 </div>
                 <div class="filter-unit-row">
-                  <input class="filter-input" type="checkbox" name="filters-form-facilities"
+                  <input class="filter-input visually-hidden" type="checkbox" name="filters-form-facilities"
                     id="filters-form-facilities-value-3" value="3">
-                  <label for="filters-form-facilities-value-3">Wi-fi</label>
+                  <label class="label-checkbox" for="filters-form-facilities-value-3">Wi-fi</label>
                 </div>
               </fieldset>
               <fieldset class="filter-unit">
                 <legend class="filter-unit-subtitle">Тип жилья:</legend>
                 <div class="filter-unit-row">
-                  <input class="filter-input" type="checkbox" name="filters-form-accommodation"
+                  <input class="filter-input visually-hidden" type="checkbox" name="filters-form-accommodation"
                     id="filters-form-accommodation-value-1" checked value="1">
-                  <label for="filters-form-accommodation-value-1">Гостиница</label>
+                  <label class="label-checkbox" for="filters-form-accommodation-value-1">Гостиница</label>
                 </div>
                 <div class="filter-unit-row">
-                  <input class="filter-input" type="checkbox" name="filters-form-accommodation"
+                  <input class="filter-input visually-hidden" type="checkbox" name="filters-form-accommodation"
                     id="filters-form-accommodation-value-2" checked value="2">
-                  <label for="filters-form-accommodation-value-2">Мотель</label>
+                  <label class="label-checkbox" for="filters-form-accommodation-value-2">Мотель</label>
                 </div>
                 <div class="filter-unit-row">
-                  <input class="filter-input" type="checkbox" name="filters-form-accommodation"
+                  <input class="filter-input visually-hidden" type="checkbox" name="filters-form-accommodation"
                     id="filters-form-accommodation-value-3" checked value="3">
-                  <label for="filters-form-accommodation-value-3">Апартаменты</label>
+                  <label class="label-checkbox" for="filters-form-accommodation-value-3">Апартаменты</label>
                 </div>
               </fieldset>
               <fieldset class="filter-unit">
                 <legend class="filter-unit-subtitle">Стоймость в сутки (Р):</legend>
-                <label for="filters-form-price-from" class="visually-hidden">от</label>
-                <input class="filter-input" type="number" name="filters-form-price-from" id="filters-form-price-from"
-                  placeholder="от 0">
-                <label for="filters-form-price-to" class="visually-hidden">до</label>
-                <input class="filter-input" type="number" name="filters-form-price-to" id="filters-form-price-to"
-                  placeholder="до 3000">
+                <div class="test">
+                  <label for="filters-form-price-from" class="visually-hidden">от</label>
+                  <input class="filter-input filter-input-number" type="number" name="filters-form-price-from"
+                    id="filters-form-price-from" placeholder="от 0">
+                  <label for="filters-form-price-to" class="visually-hidden">до</label>
+                  <input class="filter-input filter-input-number" type="number" name="filters-form-price-to"
+                    id="filters-form-price-to" placeholder="до 3000">
+                </div>
                 <div class="slider-range">
                   <div class="slider-control">
                     <div class="scale">
