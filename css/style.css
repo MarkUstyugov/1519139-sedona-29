@@ -610,7 +610,6 @@ img {
 
 /* Map */
 
-
 .static-map-image {
   display: block;
   width: 100%;
@@ -866,13 +865,6 @@ img {
   margin-right: 6px;
 }
 
-/* .catalog-info-block-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-right: 6px;
-} */
-
 .catalog-info-title {
   font-size: 21px;
   line-height: 16px;
@@ -935,14 +927,10 @@ img {
   color: var(--basic-white);
   /* background-color: var(--basic-black); */
   position: relative;
-}
-
-.form-wrapper {
-  position: relative;
   overflow: hidden;
 }
 
-.form-wrapper::after {
+.filter::after {
   content: url("../img/welcome-bg.jpg");
   background-repeat: no-repeat;
   filter: blur(10px);
@@ -957,21 +945,25 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  box-sizing: border-box;
   padding: 23px 73px 32px;
 }
 
-fieldset {
+.filter-fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.filter-column:first-child {
-  width: 256px;
+.filter-unit {
+  margin: 0;
+  padding: 0;
 }
 
-.filter-column:last-child {
+.filter-checkbox-area {
+  width: 253px;
+}
+
+.filter-column-cost {
   margin-left: auto;
 }
 
@@ -979,6 +971,7 @@ fieldset {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding: 0;
   margin-bottom: 24px;
 }
 
@@ -986,20 +979,14 @@ fieldset {
   margin-bottom: 0;
 }
 
-.filter-unit:nth-child(3) {
-  margin-left: auto;
-  flex-basis: 317px;
-}
-
-.filter-unit-subtitle {
+.filter-unit-checkbox-subtitle {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
-
   margin-bottom: 30px;
 }
 
-.filter-unit-subtitle1 {
+.filter-unit-cost-subtitle {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -1057,12 +1044,12 @@ fieldset {
   left: -42px;
 }
 
-.filters-form-price-range-wrapper {
+.filters-form-price-range {
   display: flex;
   position: relative;
 }
 
-.filters-form-price-range-wrapper::before {
+.filters-form-price-range::before {
   content: "";
   position: absolute;
   width: 2px;
@@ -1104,20 +1091,6 @@ fieldset {
   border-bottom-left-radius: 0;
 }
 
-.filter-input-number::-webkit-outer-spin-button,
-.filter-input-number::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.filter-input-number {
-  -moz-appearance:textfield;
-}
-
-.filter-input::-moz-placeholder {
-  opacity: 1
-}
-
 .show-button-container {
   margin-top: 32px;
   text-align: center;
@@ -1143,6 +1116,29 @@ fieldset {
 .filter-input[type="number"]::placeholder{
   text-transform: uppercase;
   color: var(--basic-white);
+}
+
+.filter-input-number::-webkit-outer-spin-button,
+.filter-input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.filter-input-number {
+  -moz-appearance:textfield;
+}
+
+.filter-input-number::-moz-placeholder {
+  opacity: 1;
+  line-height: 32px;
+}
+
+.filter-input-number:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.filter-input-number:focus::-webkit-input-placeholder {
+  color: transparent;
 }
 
 /* Slider-range */
