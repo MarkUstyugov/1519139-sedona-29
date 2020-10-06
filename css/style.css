@@ -174,9 +174,11 @@ img {
   text-align: center;
 }
 
-.advantages-wrapper {
+.advantages-header {
+  margin: 0 auto;
   width: 520px;
-  margin: 48px auto 50px;
+  /* margin: 48px auto 50px; */
+  padding: 48px 60px 60px 60px;
 }
 
 .advantages-title {
@@ -380,19 +382,22 @@ img {
   text-align: center;
 }
 
+.search-header {
+  margin: 0 auto;
+  padding: 56px;
+}
+
 .search-title {
   font-size: 30px;
   line-height: 21px;
-  margin-top: 56px;
+  margin: 0;
   margin-bottom: 35px;
 }
+
 
 .search-text {
   font-size: 14px;
   line-height: 24px;
-  width: 435px;
-  margin: 0 auto;
-  margin-bottom: 47px;
 }
 
 /* Search form */
@@ -472,6 +477,15 @@ img {
   opacity: 1
 }
 
+.search-form-input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.search-form-input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+
 .form-field {
   position: relative;
 }
@@ -528,6 +542,10 @@ img {
   background-image: url("../img/minus-hover.svg");
 }
 
+.minus-button:active {
+  background-image: url("../img/plus-active.svg");
+}
+
 .plus-button {
   position: absolute;
   width: 38px;
@@ -546,23 +564,9 @@ img {
   background-image: url("../img/plus-hover.svg");
 }
 
-/* .calender-icon {
-  position: absolute;
-  right: 7px;
-  top: 7px;
-} */
-
-/* .calender-icon:hover + .search-form-input {
-  background-color: var(--basic-grey-dark);
-} */
-
-/* .calender-icon:hover path{
-  fill: var(--basic-black);
+.plus-button:active {
+  background-image: url("../img/plus-active.svg");
 }
-
-.calender-icon:active path{
-  fill: var(--basic-blue);
-} */
 
 .search-form-label-adult {
   position: relative
@@ -603,7 +607,8 @@ img {
 
 /* Map */
 
-.map-image {
+
+.static-map-image {
   display: block;
   width: 100%;
 }
@@ -716,7 +721,7 @@ img {
 
 .sort-wrapper {
   display: flex;
-  padding: 32px 73px;
+  padding: 30px 73px;
 }
 
 .sort {
@@ -934,7 +939,6 @@ img {
 .filter-wrapper {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
 }
 
 .form-wrapper::after {
@@ -959,7 +963,7 @@ img {
 }
 
 .filter-unit-row {
-  margin-bottom: 22px;
+  margin-bottom: 30px;
 }
 
 .filter-unit:nth-child(3) {
