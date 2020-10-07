@@ -84,6 +84,7 @@ img {
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
+  position: relative;
 }
 
 .main-nav-logo {
@@ -945,7 +946,7 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 23px 73px 32px;
+  padding: 25px 73px 32px;
 }
 
 .filter-fieldset {
@@ -983,14 +984,14 @@ img {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .filter-unit-cost-subtitle {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .label-checkbox {
@@ -1166,13 +1167,11 @@ img {
 
 .toggle {
   position: absolute;
-  width: 4px;
-  height: 4px;
-  padding: 0;
+  padding: 1.6px;
   border: 8px solid #ffffff;
   background-color: #ababab;
   border-radius: 50%;
-  top: -10px;
+  top: -9px;
   box-shadow: 0 2px 0 rgba(171, 171, 171, 0.3);
 }
 
