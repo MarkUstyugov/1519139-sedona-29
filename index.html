@@ -110,56 +110,58 @@
             седоне
           </p>
         </div>
-        <button class="button search-button" type="button">Поиск Гостиницы в седоне</button>
-        <div class="form-container search-form-open">
-          <form action="https://echo.htmlacademy.ru" method="POST" id="search-form" class="search-form">
-            <div class="form-field">
-              <label class="search-form-label" for="search-form-from">Дата заезда: </label>
-              <div class="icon-wrapper">
-                <input class="search-form-input search-form-input-calender" type="text" name="search-form-from"
-                  id="search-form-from" placeholder="24 апреля 2017">
-                <button class="calender-button" type="button"></button>
-              </div>
-            </div>
-            <div class="form-field">
-              <label class="search-form-label" for="search-form-to">Дата выезда: </label>
-              <div class="icon-wrapper">
-                <input class="search-form-input search-form-input-calender" type="text" name="search-form-to"
-                  id="search-form-to" placeholder="4 июня 2017">
-                <button class="calender-button" type="button"></button>
-              </div>
-            </div>
-            <div class="form-field multi-field">
-              <div class="column">
-                <label class="search-form-label search-form-label-adult" for="search-form-adult">Взрослые:</label>
+        <div class="search-form-wrapper">
+          <button class="button search-button" type="button">Поиск Гостиницы в седоне</button>
+          <div class="form-container">
+            <form action="https://echo.htmlacademy.ru" method="GET" id="search-form" class="search-form">
+              <div class="form-field">
+                <label class="search-form-label" for="search-form-from">Дата заезда: </label>
                 <div class="icon-wrapper">
-                  <input class="search-form-input" type="number" name="search-form-adult" id="search-form-adult"
-                    placeholder="2">
-                  <button class="minus-button" type="button"></button>
-                  <button class="plus-button" type="button"></button>
+                  <input class="search-form-input search-form-input-calender" type="text" name="search-form-from"
+                    id="search-form-from" placeholder="24 апреля 2017">
+                  <button class="calender-button" type="button"></button>
                 </div>
               </div>
-              <div class="column">
-                <label class="search-form-label search-form-label-child" for="search-form-child">Дети:</label>
+              <div class="form-field">
+                <label class="search-form-label" for="search-form-to">Дата выезда: </label>
                 <div class="icon-wrapper">
-                  <input class="search-form-input" type="number" name="search-form-child" id="search-form-child"
-                    placeholder="0">
-                  <button class="minus-button" type="button"></button>
-                  <button class="plus-button" type="button"></button>
+                  <input class="search-form-input search-form-input-calender" type="text" name="search-form-to"
+                    id="search-form-to" placeholder="4 июня 2017">
+                  <button class="calender-button" type="button"></button>
                 </div>
               </div>
-            </div>
-            <button type="submit" class="button find-button">Найти</button>
-          </form>
-        </div>
-        <div class="map">
-          <!-- <div class="interactive-map">
+              <div class="form-field multi-field">
+                <div class="column">
+                  <label class="search-form-label search-form-label-adult" for="search-form-adult">Взрослые:</label>
+                  <div class="icon-wrapper">
+                    <input class="search-form-input" type="number" name="search-form-adult" id="search-form-adult"
+                      placeholder="2">
+                    <button class="minus-button" type="button"></button>
+                    <button class="plus-button" type="button"></button>
+                  </div>
+                </div>
+                <div class="column">
+                  <label class="search-form-label search-form-label-child" for="search-form-child">Дети:</label>
+                  <div class="icon-wrapper">
+                    <input class="search-form-input" type="number" name="search-form-child" id="search-form-child"
+                      placeholder="0">
+                    <button class="minus-button" type="button"></button>
+                    <button class="plus-button" type="button"></button>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="button find-button">Найти</button>
+            </form>
+          </div>
+          <div class="map">
+            <!-- <div class="interactive-map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d361488.4045600764!2d-110.41357238369437!3d35.135064545381574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872fa8161db2d857%3A0x550fb4980e35323c!2z0KXQvtC70LHRgNGD0LosINCQ0YDQuNC30L7QvdCwIDg2MDI1LCDQodCo0JA!5e0!3m2!1sru!2sru!4v1601467868033!5m2!1sru!2sru"
               width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
               tabindex="0"></iframe>
           </div> -->
-          <img class="static-map-image" src="img/map.png" alt="Карта штата" width="1200" height="594">
+            <img class="static-map-image" src="img/map.png" alt="Карта штата" width="1200" height="594">
+          </div>
         </div>
       </section>
     </main>

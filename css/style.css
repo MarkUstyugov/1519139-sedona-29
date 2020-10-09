@@ -339,6 +339,7 @@ img {
   position: relative;
   width: 568px;
   height: 86px;
+  z-index: 2;
 }
 
 .search-button:hover,
@@ -369,6 +370,7 @@ img {
   border: 2px solid #ffffff;
   border-radius: 2px;
   background-color: transparent;
+  position: relative;
 }
 
 /* Search */
@@ -381,6 +383,7 @@ img {
 .search-header {
   margin: 0 auto;
   padding: 56px 60px 32px;
+  position: relative;
 }
 
 .search-title {
@@ -398,21 +401,21 @@ img {
 
 /* Search form */
 
+.search {
+  position: relative;
+}
+
 .form-container {
   width: 568px;
   background-color: var(--basic-white);
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -100%);
   padding: 55px;
   box-sizing: border-box;
-  transition: height 0.5s 0.5s ease-out;
-  display: none;
-  flex-wrap: wrap;
-}
-
-.search-form-open {
   display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
 }
 
 .search-form {
@@ -607,6 +610,9 @@ img {
 }
 
 /* Map */
+.map {
+  position: relative;
+}
 
 .static-map-image {
   display: block;
@@ -1179,4 +1185,41 @@ img {
 
 .toggle-max {
   left: 252px;
+}
+
+@keyframes form-show {
+  from {
+    transform: translate(-50%, -100%);
+  }
+
+  to {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes form-hide {
+  from {
+    transform: translate(-50%, 0);
+  }
+
+  to {
+
+    transform: translate(-50%, -100%);
+  }
+}
+
+.search-form-open {
+  animation-name: form-show;
+  animation-duration: 2s;
+  transform: translate(-50%, 0);
+}
+
+.search-form-close {
+  animation-name: form-hide;
+  animation-duration: 2s;
+}
+
+.search-form-wrapper {
+  position: relative;
+  overflow: hidden;
 }
