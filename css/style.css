@@ -332,10 +332,16 @@ img {
   background-color: var(--basic-brown);
 }
 
-.details-button,
-.order-button {
+.details-button {
   padding: 3px 18px;
   flex-grow: 0;
+  box-sizing: border-box;
+}
+
+.order-button {
+  padding: 3px 16px;
+  flex-grow: 0;
+  box-sizing: border-box;
 }
 
 .search-button {
@@ -415,10 +421,10 @@ img {
   background-color: var(--basic-white);
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, 0);
   padding: 55px;
   box-sizing: border-box;
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   z-index: 1;
 }
@@ -859,7 +865,7 @@ img {
 }
 
 .catalog-info-block-inner-wrapper{
- display: flex;
+  display: flex;
 }
 
 .catalog-info-block-column {
@@ -879,7 +885,7 @@ img {
   font-size: 21px;
   line-height: 16px;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 5px
 }
 
 .catalog-list-item-link {
@@ -974,6 +980,7 @@ img {
 
 .filter-column-cost {
   margin-left: auto;
+  flex-basis: 327px;
 }
 
 .filter-unit-row {
@@ -999,6 +1006,7 @@ img {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
+  margin-left: 10px;
   margin-bottom: 12px;
 }
 
@@ -1056,6 +1064,7 @@ img {
 .filters-form-price-range {
   display: flex;
   position: relative;
+  margin-left: 10px;
 }
 
 .filters-form-price-range::before {
@@ -1163,8 +1172,9 @@ img {
 /* Slider-range */
 
 .slider-range {
- width: 100%;
+ width: 316px;
  margin: 20px 0;
+ margin-left: 10px;
 }
 
 .slider-control {
@@ -1206,41 +1216,52 @@ img {
   left: 252px;
 }
 
-@keyframes form-show {
-  from {
-    transform: translate(-50%, -100%);
-  }
-
-  to {
-    transform: translate(-50%, 0);
-  }
-}
-
-@keyframes form-hide {
-  from {
-    transform: translate(-50%, 0);
-  }
-
-  to {
-
-    transform: translate(-50%, -100%);
-  }
-}
-
-.search-form-open {
-  animation-name: form-show;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  display: flex;
-}
-
-.search-form-close {
-  animation-name: form-hide;
-  animation-duration: 2s;
-  display: none;
-}
-
 .search-form-wrapper {
   position: relative;
   overflow: hidden;
 }
+
+.search-form-hidden {
+  visibility: hidden;
+  transform: translate(-50%, -100%);
+}
+
+.search-form-open {
+  transition: transform 2s ease;
+  transform: translate(-50%, 0);
+  display: flex;
+}
+
+/* @keyframes form-open {
+  from {
+    transform: translate(-50%, -100%);
+  }
+
+  to {
+    transform: translate(-50%, 0);
+  }
+} */
+
+/* @keyframes form-close {
+  from {
+    transform: translate(-50%, 0);
+  }
+
+  to {
+    transform: translate(-50%, -100%);
+    display: none;
+  }
+} */
+
+/* .search-form-open {
+  animation-name: form-open;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  display: flex;
+} */
+
+/* .search-form-close {
+  animation-name: form-close;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+} */
