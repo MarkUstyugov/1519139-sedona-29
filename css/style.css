@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 /* Variables */
 
 :root {
@@ -114,13 +107,11 @@ img {
 }
 
 .site-navigation {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 227px 1fr 1fr 227px;
-  grid-template-columns: 227px 1fr 1fr 227px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
@@ -159,20 +150,25 @@ img {
       -ms-flex-pack: end;
           justify-content: flex-end;
   min-height: 56px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 20%;
+}
+
+.site-navigation-item:nth-child(4n+2) {
+  margin-right: 10%;
+  padding-left: 18px;
+}
+
+.site-navigation-item:nth-child(4n+3) {
+  margin-left: 10%;
+  padding-right: 18px;
 }
 
 .site-navigation-item:nth-child(4n+1), .site-navigation-item:nth-child(4n+2) {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-}
-
-.site-navigation-item:nth-child(4n+2) {
-  padding-right: 60px;
-}
-
-.site-navigation-item:nth-child(4n+3) {
-  padding-left: 60px;
 }
 
 /* Main Grid */
@@ -267,7 +263,7 @@ img {
 
 .advantage-list-item-text {
   margin: 0;
-  margin-top: 25px;
+  margin-top: 22px;
 }
 
 .advantage-list-item {
@@ -397,7 +393,7 @@ img {
 }
 
 .details-button {
-  padding: 3px 18px;
+  padding: 3px 17px;
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
@@ -406,7 +402,7 @@ img {
 }
 
 .order-button {
-  padding: 3px 16px;
+  padding: 3px 17px;
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
@@ -743,8 +739,10 @@ img {
 }
 
 /* Map */
+
 .map {
   position: relative;
+  height: 594px;
 }
 
 .static-map-image {
@@ -863,8 +861,9 @@ img {
 }
 
 .social-list-item {
-  margin-bottom: 2px;
-  margin-right: 6px;
+  margin-bottom: 6px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 .social-button:hover {
