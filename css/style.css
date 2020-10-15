@@ -18,6 +18,10 @@
   --basic-grey-border: #e5e5e5;
   --basic-text-white-opacity: rgba(255, 255, 255, 0.3);
   --basic-text-black-opacity: rgba(0, 0, 0, 0.3);
+  --basic-main-footer: rgba(255, 255, 255, 0.9);
+  --basic-toggle: #ababab;
+  --basic-toggle-shadow: rgba(171, 171, 171, 0.3);
+  --basic-body-shadow: rgba(0, 1, 1, 0.2);
 }
 
 /* Global */
@@ -45,8 +49,8 @@ body {
   -ms-flex-line-pack: start;
       align-content: start;
   margin: 0 auto;
-  -webkit-box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
-          box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  -webkit-box-shadow: 0px 5px 15px var(--basic-body-shadow);
+          box-shadow: 0px 5px 15px var(--basic-body-shadow);
   position: relative;
 }
 
@@ -212,7 +216,6 @@ img {
 .advantages-header {
   margin: 0 auto;
   width: 520px;
-  /* margin: 48px auto 50px; */
   padding: 28px 60px 52px 60px;
 }
 
@@ -275,11 +278,6 @@ img {
   color: var(--basic-white);
 }
 
-/* .advantage-list-item:nth-child(-n+2) {
-  background-color: var(--basic-blue);
-  color: var(--basic-white);
-} */
-
 .advantage-image {
   width: 800px;
   height: 256px;
@@ -313,7 +311,6 @@ img {
 }
 
 .feature-list-item {
-  /* padding: 140px 50px 0 50px; */
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,7 +441,7 @@ img {
 }
 
 .show-button {
-  border: 2px solid #ffffff;
+  border: 2px solid var(--basic-white);
   border-radius: 2px;
   background-color: transparent;
   position: relative;
@@ -716,7 +713,7 @@ img {
 
 .search-form input:focus {
   background-color: var(--basic-white);
-  border: 2px solid #E5E5E5;
+  border: 2px solid var(--basic-grey-border);
   outline: none;
 }
 
@@ -750,6 +747,15 @@ img {
   width: 100%;
 }
 
+.interactive-map {
+  display:none;
+  border: none;
+}
+
+.interactive-map-active {
+  display:block;
+}
+
 /* Footer */
 
 .main-footer {
@@ -759,7 +765,7 @@ img {
   grid-template-columns: 327px 1fr 327px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--basic-main-footer);
   margin: 0;
   padding: 0;
   position: absolute;
@@ -1137,7 +1143,6 @@ img {
 
 .filter {
   color: var(--basic-white);
-  /* background-color: var(--basic-black); */
   position: relative;
   overflow: hidden;
   padding: 25px 73px 32px;
@@ -1453,12 +1458,12 @@ img {
 .toggle {
   position: absolute;
   padding: 1.6px;
-  border: 8px solid #ffffff;
-  background-color: #ababab;
+  border: 8px solid var(--basic-white);
+  background-color: var(--basic-toggle);
   border-radius: 50%;
   top: -9px;
-  -webkit-box-shadow: 0 2px 0 rgba(171, 171, 171, 0.3);
-          box-shadow: 0 2px 0 rgba(171, 171, 171, 0.3);
+  -webkit-box-shadow: 0 2px 0 var(--basic-toggle-shadow);
+          box-shadow: 0 2px 0 var(--basic-toggle-shadow);
 }
 
 .toggle:hover {
@@ -1540,3 +1545,5 @@ img {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+
+

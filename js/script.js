@@ -1,8 +1,11 @@
 let searchForm = document.querySelector('.form-container');
 let searchButton = document.querySelector('.search-button');
 let findButton = document.querySelector('.find-button');
+let interactiveMap = document.querySelector('.interactive-map');
 
 searchForm.classList.add('search-form-hidden');
+
+interactiveMap.classList.add('interactive-map-active');
 
 searchButton.addEventListener('click', function (evt) {
   evt.preventDefault();
